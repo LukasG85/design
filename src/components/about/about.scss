@@ -1,0 +1,11 @@
+.about {
+    min-height: 630px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media(min-width: 768px) {
+        margin-top: 0;
+    }
+}

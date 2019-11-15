@@ -44,7 +44,7 @@ const Header = () => (
               </div>
             </div>
           </div>
-          <div className="row banner__mouse">
+          <div className="row no-gutters banner__mouse">
             <div className="col">
               <img className="mouse-img" src={Mouse} alt="mouse" />
             </div>
