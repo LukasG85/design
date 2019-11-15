@@ -18,7 +18,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-background-image-es5",
+      resolve: "gatsby-background-image",
       options: {
         // add your own characters to escape, replacing the default ':/'
         specialChars: "/:",
