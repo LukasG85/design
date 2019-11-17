@@ -1,15 +1,15 @@
 .works {
 
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     gap: 15px;
 
     @media(min-width: 768px) {
-        grid-template-columns: 50vw 50vw;
+        grid-template-columns: 1fr 1fr;
     }
 
     @media(min-width: 1140px) {
-        grid-template-columns: 30vw 40vw 30vw;
+        grid-template-columns: 1fr 40vw 1fr;
     }
 
     &__item {

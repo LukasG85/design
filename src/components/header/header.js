@@ -1,10 +1,9 @@
-import PropTypes from "prop-types"
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+
 import BackgroundImage from "gatsby-background-image"
 import "./header.scss"
-import Logo from "../../images/logo.png"
-import Mouse from "../../images/mouse.png"
+import BannerContents from "./BannerContents"
 
 const Header = () => (
   <StaticQuery
@@ -29,38 +28,11 @@ const Header = () => (
           fluid={imageData}
           backgroundColor={`#000`}
         >
-          <div className="container">
-            <div className="row">
-              <div className="col  banner__content">
-                <img src={Logo} alt="logo" />
-                <h1>
-                  <span>working</span> with design lab
-                </h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Itaque iusto saepe ullam ipsum neque repellendus, sunt dicta
-                  optio cumque delectus?
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row no-gutters banner__mouse">
-            <div className="col">
-              <img className="mouse-img" src={Mouse} alt="mouse" />
-            </div>
-          </div>
+          <BannerContents />
         </BackgroundImage>
       )
     }}
   />
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

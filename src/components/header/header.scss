@@ -10,6 +10,7 @@
     text-align: center;
     background-position: center right;
 
+
     @media(min-width: 992px) {
         background-position: center;
     }
@@ -41,6 +42,10 @@
 
         p {
             font-size: 18px;
+
+            span {
+                display: block;
+            }
         }
 
     }
@@ -50,9 +55,25 @@
         bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
+        animation: mouseAnimation 2s ease-in-out infinite both;
+        cursor: pointer;
 
         @media(min-width: 720px) {
             bottom: 80px;
         }
+    }
+}
+
+@keyframes mouseAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0);
     }
 }
