@@ -10,7 +10,7 @@ const BannerContents = () => {
   let text = useRef(null)
   let mouse = useRef(null)
   useEffect(() => {
-    //   Title variables
+    // Title variables
     const firstElementTitle = title.firstElementChild
     const secondElementTitle = title.lastElementChild
     // Text variables
@@ -18,21 +18,26 @@ const BannerContents = () => {
     const secondText = text.children[1]
     const thirdText = text.children[2]
 
-    TweenMax.to(container, 0, { css: { visibility: "visible" } })
+    TweenMax.to(container, { duration: 0, css: { visibility: "visible" } })
 
     const tl = new TimelineMax()
-    tl.from(logo, 0.8, {
-      y: 100,
-      opacity: 0,
-      ease: Power3.easeOut,
+    tl.from(logo, {
+      duration: 0.8,
+      css: {
+        translateY: 100,
+        opacity: 0,
+        ease: Power3.easeOut,
+      },
     })
-      .from(firstElementTitle, 0.6, {
-        x: 300,
+      .from(firstElementTitle, {
+        duration: 0.6,
+        translateX: 300,
         opacity: 0,
         ease: Power3.easeOut,
       })
-      .from(secondElementTitle, 0.6, {
-        x: -300,
+      .from(secondElementTitle, {
+        duration: 0.6,
+        translateX: -300,
         opacity: 0,
         ease: Power3.easeOut,
       })
@@ -41,17 +46,18 @@ const BannerContents = () => {
       [firstText, secondText, thirdText],
       1,
       {
-        y: 44,
+        translateY: 44,
         opacity: 0,
         ease: Power3.easeOut,
         delay: 0.8,
       },
       0.15
     )
-    tl.from(mouse, 0.4, {
+    tl.from(mouse, {
+      duration: 0.4,
       opacity: 0,
       scale: 0,
-      ease: "back.out(1.7)",
+      ease: Power3.easeOut,
     })
   }, [])
 
