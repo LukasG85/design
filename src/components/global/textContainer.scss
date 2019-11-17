@@ -69,4 +69,30 @@
     p {
         text-align: center;
     }
+
+    .btn {
+        display: block;
+        margin: 0 auto;
+        width: 60vw;
+        height: 60px;
+        background-color: #3c3c3c;
+        border-radius: 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #ffffff;
+        letter-spacing: 0.1rem;
+        transition: .3s ease-in-out;
+        font-weight: bold;
+
+        @media(min-width: 768px) {
+            width: 395px;
+            height: 60px;
+        }
+
+        &:hover {
+            background-color: #ffffff;
+            color: #3c3c3c;
+            border: 2px solid #3c3c3c;
+        }
+    }
 }

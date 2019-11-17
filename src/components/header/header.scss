@@ -8,6 +8,11 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    background-position: center right;
+
+    @media(min-width: 992px) {
+        background-position: center;
+    }
 
     &__content {
         max-width: 580px;
