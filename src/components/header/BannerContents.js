@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from "react"
 import { TweenMax, TimelineMax, Power3 } from "gsap"
 import Logo from "../../images/logo.png"
 import Mouse from "../../images/mouse.png"
+import CSSPlugin from "gsap/CSSPlugin"
+const C = CSSPlugin
 
 const BannerContents = () => {
   let container = useRef(null)
@@ -10,6 +12,7 @@ const BannerContents = () => {
   let text = useRef(null)
   let mouse = useRef(null)
   useEffect(() => {
+    console.log(typeof window)
     // Title variables
     const firstElementTitle = title.firstElementChild
     const secondElementTitle = title.lastElementChild
