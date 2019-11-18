@@ -16,6 +16,7 @@
     }
 
     &__content {
+        visibility: hidden;
         max-width: 580px;
         margin: 0 auto;
         flex-direction: column;
@@ -53,7 +54,6 @@
     &__mouse {
         position: absolute;
         bottom: 40px;
-        left: 50%;
         transform: translateX(-50%);
         animation: mouseAnimation 2s ease-in-out infinite both;
         cursor: pointer;

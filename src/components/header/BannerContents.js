@@ -11,8 +11,8 @@ const BannerContents = () => {
   let title = useRef(null)
   let text = useRef(null)
   let mouse = useRef(null)
+
   useEffect(() => {
-    console.log(typeof window)
     // Title variables
     const firstElementTitle = title.firstElementChild
     const secondElementTitle = title.lastElementChild
@@ -32,27 +32,24 @@ const BannerContents = () => {
         ease: Power3.easeOut,
       },
     })
-      .from(firstElementTitle, {
-        duration: 0.6,
-        translateX: 300,
+    tl.staggerFrom(
+      [firstElementTitle, secondElementTitle],
+      0.8,
+      {
+        translateY: 50,
         opacity: 0,
         ease: Power3.easeOut,
-      })
-      .from(secondElementTitle, {
-        duration: 0.6,
-        translateX: -300,
-        opacity: 0,
-        ease: Power3.easeOut,
-      })
-
+      },
+      0.2
+    )
     tl.staggerFrom(
       [firstText, secondText, thirdText],
-      1,
+      0.8,
       {
         translateY: 44,
         opacity: 0,
         ease: Power3.easeOut,
-        delay: 0.8,
+        delay: 0.2,
       },
       0.15
     )
@@ -93,8 +90,9 @@ const BannerContents = () => {
           </div>
         </div>
       </div>
-      <div onClick={handleClick} className="row no-gutters banner__mouse">
-        <div className="col">
+
+      <div onClick={handleClick} className="banner__mouse">
+        <div className="">
           <img
             ref={el => (mouse = el)}
             className="mouse-img"
